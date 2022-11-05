@@ -18,6 +18,8 @@ def point_follower(current,goal):
       
     # leftSpeed is a float
     # rightSpeed is a float
+    
+    #This is a new comment 
 
     # Controller code here to reach from "current" location to "goal" location.
     if current[0] < 4 and current[1] <= -3.97:
