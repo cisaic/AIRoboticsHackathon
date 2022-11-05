@@ -47,6 +47,7 @@ def point_follower(current,goal):
     else:
         leftSpeed = 8.0
         rightSpeed = 8.0
+    print('hello')
     # Sample velocities of 1.0 provided to make robot move straight by default. 
     return leftSpeed,rightSpeed
 
