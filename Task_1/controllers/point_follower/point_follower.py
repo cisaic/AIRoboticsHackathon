@@ -23,30 +23,38 @@ def point_follower(current,goal):
     if current[0] < 4 and current[1] <= -3.97:
         leftSpeed = 8.0
         rightSpeed = 8.0
+    
     elif current[0] >= 4 and current[1] <= -3.97:
         leftSpeed = -4.0
         rightSpeed = 4.0
+        
         if current[2] >= math.pi/2:
             leftSpeed = 8.0
             rightSpeed = 8.0
+    
     elif current[0] >= 3.94 and current[1] >= 3.94:
         leftSpeed = -1.0
         rightSpeed = 1.0
+        
         if current[2] >= 3.125:
             leftSpeed = 8.0
             rightSpeed = 8.0
+    
     elif current[0] <= -3.94 and current[1] <= 4.04:
         leftSpeed = -4.0
         rightSpeed = 4.0
+        
         if current[2] >= -math.pi/2 and current[2] <= 0:
             leftSpeed = 8.0
             rightSpeed = 8.0
-    #elif current[0] <= -3.9 and current[1] <= -4 and current[2] <= 0:
-     #   leftSpeed = 0.0
-      #  rightSpeed = 0.0
     else:
         leftSpeed = 8.0
         rightSpeed = 8.0
+        
+    if current[0] <= -3.9 and current[1] <= -4 and current[2] <= 0:
+        leftSpeed = 0.0
+        rightSpeed = 0.0
+    
     # Sample velocities of 1.0 provided to make robot move straight by default. 
     return leftSpeed,rightSpeed
 
